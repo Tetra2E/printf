@@ -38,24 +38,24 @@ typedef struct buffer_s
 /**
  *  * struct converter_s - A new type defining a converter struct.
  *   * @specifier: A character representing a conversion specifier.
- *    * @func: A pointer to a conversion function corresponding to specifier.
- *     */
+ * @func: A pointer to a conversion function corresponding to specifier.
+ */
 typedef struct converter_s
 {
-		unsigned char specifier;
-			unsigned int (*func)(va_list, buffer_t *,
-								unsigned char, int, int, unsigned char);
+	unsigned char specifier;
+	unsigned int (*func)(va_list, buffer_t *,
+	unsigned char, int, int, unsigned char);
 } converter_t;
 
 /**
  *  * struct flag_s - A new type defining a flags struct.
  *   * @flag: A character representing a flag.
  *    * @value: The integer value of the flag.
- *     */
+ */
 typedef struct flag_s
 {
-		unsigned char flag;
-			unsigned char value;
+	unsigned char flag;
+	unsigned char value;
 } flag_t;
 
 int _printf(const char *format, ...);
